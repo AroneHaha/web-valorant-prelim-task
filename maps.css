@@ -1,0 +1,52 @@
+body {
+    background-color: #ececec;
+    color: #1f2326;
+    overflow-x: hidden;
+}
+
+.img-lg { 
+    width: 65%; 
+    height: 55%; 
+}
+.img-sm { 
+    width: 45%; 
+    height: 35%; 
+}
+.img-md { width: 55%; 
+    height: 40%; 
+}
+
+.clip-corner {
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% calc(100% - 15px), 
+        calc(100% - 15px) 100%, 
+        0 100%
+    );
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.map-img-container {
+    transition: transform 0.4s ease;
+}
+.map-img-container:hover {
+    transform: scale(1.02);
+    z-index: 10;
+}
+
+.nav-scrolled {
+    background-color: rgba(15, 25, 35, 0.95);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}

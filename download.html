@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT - Download</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/download-config.js"></script>
+    <link rel="stylesheet" href="download.css">
+    
+    <style>
+        #mobile-menu {
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col bg-black text-white">
+
+    <div class="fixed inset-0 z-0">
+        <img src="https://z-cdn-media.chatglm.cn/files/2fe4a0f1-367d-4014-b974-3b0241aa2560.png?auth_key=1870902761-478c203d7aef446f9ba7023d9b4bd9e6-0-726b7b97eea5038c91a3e4deafa426e0" 
+             alt="Background" 
+             class="w-full h-full object-cover">
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+    </div>
+
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center border-b border-transparent h-20">
+        <div id="menu-btn" class="md:hidden text-white cursor-pointer text-2xl z-50">
+            &#9776;
+        </div>
+
+        <div class="flex items-center">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img src="assets/text-logo/valorant.webp" alt="Valorant Logo" class="h-8 w-auto group-hover:opacity-80 transition-opacity duration-300">
+            </a>
+        </div>
+
+        <nav class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-valorant-white">
+            <a href="index.html" class="nav-link hover:text-valorant-red transition-colors">Game Info</a>
+            <a href="maps.html" class="nav-link hover:text-valorant-red transition-colors">Maps</a>
+            <a href="agents.html" class="nav-link hover:text-valorant-red transition-colors">Agents</a>
+            <a href="download.html" class="nav-link hover:text-valorant-red transition-colors">Download</a>
+            <a href="https://valorantesports.com/en-US/" class="nav-link hover:text-valorant-red transition-colors">Esports</a>
+        </nav>
+
+        <a href="sign-in.html" class="hidden md:inline-block bg-valorant-red text-white font-bold uppercase tracking-widest text-s 
+            py-2 px-10 rounded-lg hover:bg-white hover:text-valorant-red transition-all duration-300 cursor-pointer">
+            Sign in
+        </a>
+    </header>
+
+    <div id="mobile-menu" class="fixed top-20 left-0 w-full bg-valorant-dark/95 backdrop-blur-md z-40 border-b border-white/10 px-6 flex flex-col gap-6 py-6 md:hidden">
+        <a href="index.html" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Game Info</a>
+        <a href="maps.html" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Maps</a>
+        <a href="agents.html" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Agents</a>
+        <a href="download.html" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Download</a>
+        <a href="https://valorantesports.com/en-US/" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Esports</a>
+        <div class="h-px bg-white/10 w-full my-2"></div>
+        <a href="sign-in.html" class="bg-valorant-red text-white font-bold uppercase tracking-widest text-center py-3 rounded-lg hover:bg-white hover:text-valorant-red transition-colors">
+            Sign in
+        </a>
+    </div>
+
+    <main class="relative z-10 flex-grow flex flex-col items-center justify-center px-6 text-center pt-20">
+        
+        <div class="max-w-4xl w-full">
+            
+            <h1 class="text-5xl md:text-8xl font-bold uppercase tracking-tighter text-white mb-2 fade-in-up">
+                VALORANT
+            </h1>
+            
+            <h2 class="text-2xl md:text-4xl font-light uppercase tracking-widest text-gray-300 mb-8 fade-in-up delay-100">
+                Choose Your Platform
+            </h2>
+
+            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto fade-in-up delay-200">
+                A 5v5 tactical shooter. Free to play. Cross-progression enabled.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl mx-auto fade-in-up delay-300">
+                
+                <a href="#" class="platform-btn clip-corner group relative bg-valorant-red/80 hover:bg-valorant-red border border-valorant-red p-8 flex flex-col items-center justify-center min-h-[180px]">
+                    <div class="text-4xl mb-4 text-white group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold uppercase tracking-wider text-white">PC</span>
+                    <span class="text-xs text-white/70 mt-2 uppercase tracking-widest">Download</span>
+                </a>
+
+                <a href="#" class="platform-btn clip-corner group relative bg-transparent hover:bg-valorant-red border border-white/30 hover:border-valorant-red p-8 flex flex-col items-center justify-center min-h-[180px]">
+                    <div class="text-4xl mb-4 text-white group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold uppercase tracking-wider text-white group-hover:text-white">Xbox</span>
+                    <span class="text-xs text-gray-400 group-hover:text-white/70 mt-2 uppercase tracking-widest">Series X|S</span>
+                </a>
+
+                <a href="#" class="platform-btn clip-corner group relative bg-transparent hover:bg-valorant-red border border-white/30 hover:border-valorant-red p-8 flex flex-col items-center justify-center min-h-[180px]">
+                    <div class="text-4xl mb-4 text-white group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold uppercase tracking-wider text-white group-hover:text-white">PlayStation</span>
+                    <span class="text-xs text-gray-400 group-hover:text-white/70 mt-2 uppercase tracking-widest">5</span>
+                </a>
+
+            </div>
+            
+            <div class="mt-12 fade-in-up delay-300">
+                <p class="text-sm text-gray-400 mb-4">You’ll need a Riot Account to log in and play. Don’t have one?</p>
+                <a href="#" class="text-white border-b border-valorant-red hover:text-valorant-red transition-colors pb-1 uppercase font-bold tracking-widest text-md">
+                    Create Riot Account
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="relative z-10 py-8 text-center">
+        <p class="text-gray-600 text-xs uppercase tracking-widest">
+            &copy; 2023 Riot Games, Inc.
+        </p>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if(menuBtn && mobileMenu){
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+            });
+        }
+    });
+</script>
+</body>
+</html>

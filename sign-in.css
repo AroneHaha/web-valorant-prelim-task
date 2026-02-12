@@ -1,0 +1,63 @@
+body {
+    background-color: #0f1923;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Clipped corners for inputs and buttons */
+.clip-corner {
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% calc(100% - 10px), 
+        calc(100% - 10px) 100%, 
+        0 100%
+    );
+}
+
+/* Input Focus Effect */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -10px;
+    left: 0;
+    font-size: 0.75rem;
+    color: #ff4655;
+    background-color: #0f1923;
+    padding: 0 5px;
+}
+
+.input-style {
+    transition: all 0.3s ease;
+}
+.input-style:focus {
+    box-shadow: 0 0 0 2px #ff4655;
+}
+
+/* Button Hover Animation */
+.btn-main {
+    transition: all 0.3s ease;
+}
+.btn-main:hover {
+    background-color: #fff;
+    color: #ff4655;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 70, 85, 0.4);
+}
+
+/* Background Character Mask */
+.hero-mask {
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,91 @@
+body { 
+    background-color: #0f1923; 
+    color: #ece8e1; 
+    overflow-x: hidden; 
+}
+.clip-corner { 
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%); 
+}
+.btn-skew { 
+    transform: skewX(-12deg); 
+}
+.btn-content { 
+    transform: skewX(12deg); 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-scrolled {
+    background-color: rgba(15, 25, 35, 0.95);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover line animation for nav links */
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ff4655;
+    transition: width 0.3s ease-in-out;
+    transform: skewX(-20deg);
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Scrollbar & Selection */
+::-webkit-scrollbar { 
+    width: 8px; 
+}
+::-webkit-scrollbar-track { 
+    background: #0f1923; 
+}
+::-webkit-scrollbar-thumb { 
+    background: #ff4655; 
+    border-radius: 4px; 
+}
+::selection { 
+    background: #ff4655; 
+    color: white; 
+}
+
+/* Fade In Animation */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible { 
+    opacity: 1; transform: none; 
+}
+
+/* Agent Text Highlight Animation */
+.text-highlight-role {
+    color: #d1d5db; /* Slightly darker off-white for role */
+    opacity: 0.6;
+    transform: translateY(5px);
+    transition: all 0.4s ease-out;
+}
+.text-highlight-name {
+    color: #ece8e1; /* Bright off-white for name */
+    opacity: 0.6;
+    transform: translateY(5px);
+    transition: all 0.4s ease-out 0.1s; /* Slight delay for wave effect */
+}
+
+/* On Hover: Move to 0 (Top), Increase Opacity */
+.group:hover .text-highlight-role,
+.group:hover .text-highlight-name {
+    opacity: 1;
+    transform: translateY(0);
+}
