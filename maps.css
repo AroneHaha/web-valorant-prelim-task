@@ -50,3 +50,14 @@ body {
     background-color: rgba(15, 25, 35, 0.95);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
 }
+
+#mobile-menu {
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+#mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+}

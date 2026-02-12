@@ -57,7 +57,6 @@ html {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover line animation for nav links */
 .nav-link {
     position: relative;
 }
@@ -74,4 +73,15 @@ html {
 }
 .nav-link:hover::after {
     width: 100%;
+}
+
+#mobile-menu {
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+#mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
 }

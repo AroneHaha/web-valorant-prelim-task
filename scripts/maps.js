@@ -37,7 +37,7 @@ const maps = [
 ];
 
 const grid = document.createElement("div");
-grid.className = "mapsGrid flex flex-col gap-20"; // container for all maps
+grid.className = "mapsGrid flex flex-col gap-20";
 document.querySelector("main").appendChild(grid);
 
 maps.forEach((map, index) => {

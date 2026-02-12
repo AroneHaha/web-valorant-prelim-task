@@ -4,7 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Clipped corners for inputs and buttons */
 .clip-corner {
     clip-path: polygon(
         0 0, 
@@ -15,7 +14,6 @@ body {
     );
 }
 
-/* Input Focus Effect */
 .input-group input:focus ~ label,
 .input-group input:not(:placeholder-shown) ~ label {
     top: -10px;
@@ -33,7 +31,6 @@ body {
     box-shadow: 0 0 0 2px #ff4655;
 }
 
-/* Button Hover Animation */
 .btn-main {
     transition: all 0.3s ease;
 }
@@ -44,7 +41,6 @@ body {
     box-shadow: 0 4px 15px rgba(255, 70, 85, 0.4);
 }
 
-/* Background Character Mask */
 .hero-mask {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -60,4 +56,15 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+#mobile-menu {
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+#mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
 }

@@ -13,27 +13,15 @@
     <script src="scripts/signin-config.js"></script>
     <link rel="stylesheet" href="sign-in.css">
     
-    <style>
-        #mobile-menu {
-            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-        #mobile-menu.open {
-            max-height: 500px;
-            opacity: 1;
-        }
-    </style>
 </head>
 <body class="font-sans antialiased min-h-screen flex flex-col bg-valorant-dark text-white relative">
 
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <img src="assets/bgs/sign-iin.webp" 
              alt="Valorant Character" 
-             class="absolute top-0 right-0 h-full w-full object-cover hero-mask opacity-60">
+             class="absolute top-0 left-0 h-full w-full object-cover hero-mask opacity-60 md:right-0 md:left-auto">
         
-        <div class="absolute inset-0 bg-gradient-to-l from-valorant-dark/40 via-valorant-dark/50 to-valorant-dark"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-valorant-dark/80 via-valorant-dark/60 to-transparent md:bg-gradient-to-l md:from-valorant-dark/40 md:via-valorant-dark/50 md:to-valorant-dark"></div>
     </div>
 
     <div class="absolute top-1/2 left-0 w-full h-[60%] -translate-y-1/2 bg-valorant-red opacity-5 -skew-x-12 z-0 pointer-events-none"></div>
@@ -44,9 +32,9 @@
             &#9776;
         </div>
 
-        <div class="flex items-center">
-            <a href="#" class="flex items-center gap-4 group">
-                <img src="assets/text-logo/valorant.webp" alt="Valorant Logo" class="h-8 w-auto group-hover:opacity-80 transition-opacity duration-300">
+        <div class="flex items-center absolute left-12 md:static md:transform-none">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img id="valo-image" src="assets/text-logo/valorant.webp" alt="Valorant Logo" class="h-8 w-auto group-hover:opacity-80 transition-opacity duration-300">
             </a>
         </div>
 
@@ -64,7 +52,7 @@
         </a>
     </header>
 
-    <div id="mobile-menu" class="fixed top-20 left-0 w-full bg-valorant-dark/95 backdrop-blur-md z-40 border-b border-white/10 px-6 flex flex-col gap-6 py-6 md:hidden">
+    <div id="mobile-menu" class="fixed top-20 left-0 w-[88%] bg-valorant-dark/95 backdrop-blur-md z-40 border-b border-white/10 px-6 flex flex-col gap-6 py-6 md:hidden">
         <a href="index.html" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Game Info</a>
         <a href="maps.html" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Maps</a>
         <a href="agents.html" class="text-white font-bold uppercase tracking-widest hover:text-valorant-red">Agents</a>
@@ -157,17 +145,6 @@
         </div>
     </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if(menuBtn && mobileMenu){
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('open');
-            });
-        }
-    });
-</script>
+<script src="scripts/burger.js"></script>
 </body>
 </html>
